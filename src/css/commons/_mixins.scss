@@ -1,0 +1,127 @@
+/* stylelint-disable scss/at-mixin-pattern */
+
+/**
+*	Mobile
+*/
+@mixin mobileP {
+	@media (max-width: #{$tabletP}) and (orientation: portrait) {
+		@content;
+	}
+}
+
+/**
+*	Texts
+*/
+@mixin baseText {
+	// font-family: $sans;
+	font-weight: 500;
+	color: $black;
+}
+
+@mixin h1 {
+	@include baseText;
+
+	font-size: ratio(3.2);
+	font-weight: 400;
+	line-height: ratio(3.2);
+	text-transform: uppercase;
+	letter-spacing: -0.01em;
+}
+
+@mixin h2 {
+	@include baseText;
+
+	font-size: ratio(2.4);
+	font-weight: 400;
+	line-height: ratio(3);
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+
+@mixin h3 {
+	@include baseText;
+
+	font-size: ratio(1.6);
+	line-height: ratio(2.6);
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+}
+
+@mixin h4 {
+	@include baseText;
+
+	font-size: ratio(1.2);
+	line-height: ratio(2.2);
+	text-transform: uppercase;
+	letter-spacing: 0.05em;
+}
+
+@mixin body {
+	@include baseText;
+
+	font-size: ratio(1.2);
+	line-height: ratio(2.4);
+}
+
+@mixin bodySmall {
+	@include baseText;
+
+	font-size: ratio(1);
+	line-height: ratio(1.8);
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+}
+
+@mixin h1Mobile {
+	@include baseText;
+
+	font-size: ratiom(2.2);
+	font-weight: 400;
+	line-height: ratiom(2.4);
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+
+@mixin h2Mobile {
+	@include baseText;
+
+	font-size: ratiom(1.8);
+	font-weight: 400;
+	line-height: ratiom(2.2);
+	text-transform: uppercase;
+	letter-spacing: -0.03em;
+}
+
+@mixin h3Mobile {
+	@include baseText;
+
+	font-size: ratiom(1.4);
+	line-height: ratiom(2.2);
+	text-transform: uppercase;
+	letter-spacing: -0.02em;
+}
+
+@mixin h4Mobile {
+	@include baseText;
+
+	font-size: ratiom(1.2);
+	font-weight: 500;
+	line-height: ratiom(2.2);
+	text-transform: uppercase;
+	letter-spacing: 0.02em;
+}
+
+@mixin bodyMobile {
+	@include baseText;
+
+	font-size: ratiom(1.2);
+	line-height: ratiom(1.8);
+}
+
+@mixin bodySmallMobile {
+	@include baseText;
+
+	font-size: ratiom(1);
+	line-height: ratiom(1.8);
+	text-transform: uppercase;
+}

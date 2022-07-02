@@ -1,0 +1,16 @@
+/* stylelint-disable scss/at-function-pattern */
+@function ratio($multiplier: 1) {
+	@return ($baseSize * $multiplier);
+}
+
+@function ratioM($multiplier: 1) {
+	@return ($mobilePBaseSize * $multiplier);
+}
+
+@function cols($colsNumber: 1, $guttersNumber: $colsNumber - 1) {
+	@return ($colWidth * $colsNumber) + ($gutterInnerWidth * $guttersNumber);
+}
+
+@function colsM($colsNumber: 1) {
+	@return ($colMobileWidth * $colsNumber);
+}

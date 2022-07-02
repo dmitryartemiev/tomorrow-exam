@@ -1,0 +1,27 @@
+/* stylelint-disable selector-class-pattern */
+html {
+	padding-bottom: 0 !important;
+}
+
+html.no-scroll {
+	overflow: hidden;
+	position: relative;
+	height: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	scroll-behavior: smooth;
+	background: $white;
+
+	@include baseText;
+
+	color: $black;
+
+	&.noScroll {
+		overflow: hidden;
+		position: relative;
+		height: 100%;
+		touch-action: none;
+	}
+}

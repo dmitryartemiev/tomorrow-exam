@@ -1,0 +1,19 @@
+.env-template: &env-template
+  password: <password>
+  store: <store-name>
+  directory: dist/
+  ignores:
+    - .shopifyignore
+
+production:
+  <<: *env-template
+  theme_id: <your-theme-id>
+  readonly: true
+
+staging:
+  <<: *env-template
+  theme_id: <your-theme-id>
+
+development:
+  <<: *env-template
+  theme_id: <your-theme-id>

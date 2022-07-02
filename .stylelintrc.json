@@ -1,0 +1,16 @@
+{
+	"extends": [
+    "stylelint-config-standard-scss"
+	],
+	"plugins": [
+		"stylelint-high-performance-animation",
+		"stylelint-scss",
+		"stylelint-order"
+	],
+  "rules": {
+    "plugin/no-low-performance-animation-properties": true,
+		"string-quotes": "single",
+		"indentation": "tab",
+		"no-missing-end-of-source-newline": null
+	}
+}

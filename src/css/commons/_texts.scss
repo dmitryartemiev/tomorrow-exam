@@ -1,0 +1,60 @@
+/* stylelint-disable selector-class-pattern */
+.h1 {
+	@include h1;
+}
+
+.h2 {
+	@include h2;
+}
+
+.h3 {
+	@include h3;
+}
+
+.h4 {
+	@include h4;
+}
+
+.body {
+	@include body;
+}
+
+.bodySmall {
+	@include bodySmall;
+}
+
+.h1Mobile {
+	@include mobileP {
+		@include h1Mobile;
+	}
+}
+
+.h2Mobile {
+	@include mobileP {
+		@include h2Mobile;
+	}
+}
+
+.h3Mobile {
+	@include mobileP {
+		@include h3Mobile;
+	}
+}
+
+.h4Mobile {
+	@include mobileP {
+		@include h4Mobile;
+	}
+}
+
+.bodyMobile {
+	@include mobileP {
+		@include bodyMobile;
+	}
+}
+
+.bodySmallMobile {
+	@include mobileP {
+		@include bodySmallMobile;
+	}
+}

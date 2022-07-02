@@ -1,0 +1,66 @@
+{
+  "name": "toolbox",
+  "version": "1.0.0",
+  "description": "[![Build status](https://github.com/shopify/theme-toolbox/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/theme-toolbox/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
+  "scripts": {
+    "build": "webpack --mode production",
+    "watch": "concurrently 'theme watch' 'webpack --mode production --watch'",
+    "deploy": "concurrently 'webpack --mode production' 'theme deploy'",
+    "lint": "eslint src/js/**/* && stylelint 'src/css/**/*.scss'",
+    "lint:fix": "eslint src/js/**/* --fix && stylelint 'src/css/**/*.scss' --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dmitryartemiev/theme-toolbox.git"
+  },
+  "keywords": [],
+  "author": "Dmitry Artemiev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dmitryartemiev/theme-toolbox/issues"
+  },
+  "homepage": "https://github.com/dmitryartemiev/theme-toolbox#readme",
+  "devDependencies": {
+    "@babel/core": "^7.18.5",
+    "@babel/preset-env": "^7.18.2",
+    "autoprefixer": "^10.4.7",
+    "babel-loader": "^8.2.5",
+    "concurrently": "^7.2.2",
+    "copy-webpack-plugin": "^5.1.1",
+    "core-js": "^3.23.3",
+    "css-loader": "^6.7.1",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-google": "^0.14.0",
+    "glob": "^8.0.3",
+    "mini-css-extract-plugin": "^2.6.1",
+    "normalize.css": "^8.0.1",
+    "postcss": "^8.4.14",
+    "postcss-css-variables": "^0.18.0",
+    "postcss-custom-media": "^8.0.2",
+    "postcss-discard-comments": "^5.1.2",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^14.1.0",
+    "postcss-loader": "^7.0.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-preset-env": "^7.7.2",
+    "postcss-scss": "^4.0.4",
+    "replace-in-file-webpack-plugin": "^1.0.6",
+    "sass": "^1.53.0",
+    "sass-loader": "^13.0.1",
+    "style-loader": "^3.3.1",
+    "stylelint": "^14.9.1",
+    "stylelint-config-standard-scss": "^4.0.0",
+    "stylelint-high-performance-animation": "^1.6.0",
+    "stylelint-order": "^5.0.0",
+    "stylelint-scss": "^4.2.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-remove-empty-scripts": "^0.8.1"
+  },
+  "dependencies": {
+    "gsap": "^3.10.4",
+    "lodash-es": "^4.17.21",
+    "normalize-scss": "^7.0.1"
+  }
+}

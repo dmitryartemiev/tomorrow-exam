@@ -1,0 +1,32 @@
+/* stylelint-disable number-max-precision */
+/* stylelint-disable scss/dollar-variable-pattern */
+
+$baseSize: 0.6944444444vw; // 10px on 1440px
+$mobilePBaseSize: 2.6666666667vw; // 10px on 375px
+$tabletP: 1024px;
+$mobileP: 414px;
+$colWidth: 6.5972222222vw; // 95px on 1440px
+$gutterInnerWidth: 1.3888888889vw; // 20px on 1440px
+$gutterOuterWidth: 2.7777777778vw; // 40px on 1440px
+$colMobileWidth: 17.8666666667vw; // 67px on 375px
+$gutterOuterWidthMobile: 5.3333333333vw; // 20px on 375px
+
+$easeInOutQuad: cubic-bezier(0.45, 0, 0.55, 1);
+$easeInCirc: cubic-bezier(0.55, 0, 1, 0.45);
+$easeOutCirc: cubic-bezier(0, 0.55, 0.45, 1);
+$easeInOutCirc: cubic-bezier(0.85, 0, 0.15, 1);
+$easeInOutSine: cubic-bezier(0.37, 0, 0.63, 1);
+$easeInOutCubic: cubic-bezier(0.65, 0, 0.35, 1);
+$easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+$easeInOutExpo: cubic-bezier(0.87, 0, 0.13, 1);
+$customEasing: cubic-bezier(0.165, 0.84, 0.44, 1);
+$customEasing2: cubic-bezier(0.77, 0, 0.175, 1);
+$customEasing3: cubic-bezier(0.86, 0, 0.12, 1);
+$black: #2c2c2c;
+$border: #e2d5ca;
+$white: #fff;
+$beige: #fbf6ea;
+$red: #d55c30;
+$darkGrey: #a6a29f;
+
+// $sans: 'Nuckle', sans-serif;
