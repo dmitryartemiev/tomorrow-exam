@@ -28,8 +28,9 @@
     {% endif %}
 
     {% render 'meta-tags' %}
+    <script src="{{ 'app.js' | asset_url }}" defer="defer"></script>
 
-    <script src="{{ 'global.js' | asset_url }}" defer="defer"></script>
+    {% comment %} <script src="{{ 'global.js' | asset_url }}" defer="defer"></script> {% endcomment %}
     {{ content_for_header }}
 
     {%- liquid
@@ -265,8 +266,8 @@
       }
     </script>
 
-    {%- if settings.predictive_search_enabled -%}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
-    {%- endif -%}
+    {%- endif -%} {% endcomment %}
   </body>
 </html>

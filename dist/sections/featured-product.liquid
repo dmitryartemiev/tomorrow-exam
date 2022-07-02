@@ -142,7 +142,7 @@
                 </quantity-input>
               </div>
             {%- when 'share' -%}
-              <script src="{{ 'share.js' | asset_url }}" defer="defer"></script>
+              {% comment %} <script src="{{ 'share.js' | asset_url }}" defer="defer"></script> {% endcomment %}
               <share-button id="Share-{{ section.id }}" class="share-button" {{ block.shopify_attributes }}>
                 <button class="share-button__button hidden">
                   {% render 'icon-share' %}
@@ -375,13 +375,13 @@
   </div>
 </section>
 
-<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
+{% comment %} <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 {%- if first_3d_model -%}
   <script type="application/json" id="ProductJSON-{{ product.id }}">
     {{ product.media | where: 'media_type', 'model' | json }}
   </script>
   <script src="{{ 'product-model.js' | asset_url }}" defer></script>
-{%- endif -%}
+{%- endif -%} {% endcomment %}
 
 {%- liquid
   if product.selected_or_first_available_variant.featured_media
@@ -459,10 +459,10 @@
   });
 </script>
 
-{% if product.media.size > 0 %}
+{% comment %} {% if product.media.size > 0 %}
   <script src="{{ 'product-modal.js' | asset_url }}" defer="defer"></script>
   <script src="{{ 'media-gallery.js' | asset_url }}" defer="defer"></script>
-{% endif %}
+{% endif %} {% endcomment %}
 
 {% schema %}
 {
