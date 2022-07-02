@@ -29,6 +29,5 @@ watch:
 deploy:
 	npm run deploy
 
-zip: build
-	@echo "Creating $(LAST_TAG).zip..."
-	zip -qr $(LAST_TAG).zip $(DIRS)
+zip: 
+	npm run package

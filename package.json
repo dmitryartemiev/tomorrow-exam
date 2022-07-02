@@ -4,8 +4,9 @@
   "description": "[![Build status](https://github.com/shopify/theme-toolbox/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Shopify/theme-toolbox/actions/workflows/ci.yml?query=branch%3Amain) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?color=informational)](/.github/CONTRIBUTING.md)",
   "scripts": {
     "build": "webpack --mode production",
-    "watch": "concurrently 'theme watch' 'webpack --mode production --watch'",
-    "deploy": "concurrently 'webpack --mode production' 'theme deploy'",
+    "watch": "concurrently 'shopify theme serve dist' 'webpack --mode production --watch'",
+    "deploy": "concurrently 'webpack --mode production' 'shopify theme push dist'",
+    "package": "concurrently 'webpack --mode production' 'shopify theme package dist'",
     "lint": "eslint src/js/**/* && stylelint 'src/css/**/*.scss'",
     "lint:fix": "eslint src/js/**/* --fix && stylelint 'src/css/**/*.scss' --fix"
   },
