@@ -1,0 +1,37 @@
+.header {
+	padding: ratio(2.6) ratio(4);
+	display: flex;
+	justify-content: space-between;
+
+	.header__logo img {
+		width: ratio(18);
+	}
+
+	.header__icon,
+  .header__icon img,
+  .header__icon svg {
+		width: ratio(2);
+		height: ratio(2);
+	}
+
+  .header__nav{
+    display: flex;
+    align-items: center;
+  }
+
+	.nav__wrapper {
+		display: grid;
+		grid-auto-flow: column;
+    align-items: center;
+    
+    li:not(:last-child){
+      padding-right: ratio(3.5);
+
+      .nav__link{
+        text-transform: uppercase;
+        font-weight: 500;
+        line-height: 1;
+      }
+    }
+	}
+}

@@ -16,11 +16,13 @@
 	font-family: $platform;
 	font-weight: 400;
 	color: $black;
+	line-height: ratio(1.8);
+	font-size: ratio(1.4)
 }
 
 @mixin h1 {
 	@include baseText;
-
+	
 	font-size: ratio(3.2);
 	font-weight: 400;
 	line-height: ratio(3.2);
