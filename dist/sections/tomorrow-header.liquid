@@ -9,7 +9,7 @@
       {%- endif -%}
     </a>
   </div>
-  <div class="header__nav">
+  <nav class="header__nav header__nav--desktop">
     {% if section.settings.menu.links.size > 0 %}
 
       <ul class="nav__wrapper" role="list">
@@ -21,35 +21,52 @@
           </li>
         {%- endfor -%}
 
-        <li>
-          <a href="{{ routes.cart_url }}" class="header__icon">
-            <img src="{{ 'bag.svg' | asset_url }}">
-            <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-            {%- if cart != empty -%}
-              <div class="cart-count-bubble">
-                {%- if cart.item_count < 100 -%}
-                  <span aria-hidden="true">{{ cart.item_count }}</span>
-                {%- endif -%}
-                <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-              </div>
-            {%- endif -%}
-          </a>
-        </li>
+        {% capture search %}
+          <li>
+            <a href="#" class="header__icon" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
+              <span>
+                <img src="{{ 'search.svg' | asset_url }}">
+              </span>
+            </a>
+          </li>
+        {% endcapture %}
+        {{ search }}
 
-        <li>
-          <a href="#" class="header__icon" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
-            <span>
-              <svg class="icon icon-search" aria-hidden="true" focusable="false" role="presentation">
-                <path fill-rule="evenodd" clip-rule="evenodd" d="M11.03 11.68A5.784 5.784 0 112.85 3.5a5.784 5.784 0 018.18 8.18zm.26 1.12a6.78 6.78 0 11.72-.7l5.4 5.4a.5.5 0 11-.71.7l-5.41-5.4z" fill="currentColor"/>
-              </svg>
-            </span>
-          </a>
-        </li>
-
+        {% capture bag %}
+          <li>
+            <a href="{{ routes.cart_url }}" class="header__icon">
+              <img src="{{ 'bag.svg' | asset_url }}">
+              <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+              {%- if cart != empty -%}
+                <div class="cart-count-bubble">
+                  {%- if cart.item_count < 100 -%}
+                    <span aria-hidden="true">{{ cart.item_count }}</span>
+                  {%- endif -%}
+                  <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+                </div>
+              {%- endif -%}
+            </a>
+          </li>
+        {% endcapture %}
+        {{ bag }}
       </ul>
     {% endif %}
-  </div>
+  </nav>
+  <nav class="header__nav header__nav--mobile">
+    <ul class="nav__wrapper" role="list">
+      {{ search }}
+
+      {{ bag }}
+
+      <li>
+        <a href="#" class="header__icon">
+          <img src="{{ 'hamburger.svg' | asset_url }}">
+        </a>
+      </li>
+    </ul>
+  </nav>
 </header>
+
 
 {% schema %}
 {

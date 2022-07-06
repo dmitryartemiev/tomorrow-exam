@@ -5,12 +5,22 @@
 	"plugins": [
 		"stylelint-high-performance-animation",
 		"stylelint-scss",
-		"stylelint-order"
+		"stylelint-order",
+		"stylelint-selector-bem-pattern"
 	],
   "rules": {
     "plugin/no-low-performance-animation-properties": true,
 		"string-quotes": "single",
 		"indentation": "tab",
-		"no-missing-end-of-source-newline": null
+		"no-missing-end-of-source-newline": null,
+		"selector-class-pattern": null,
+		"plugin/selector-bem-pattern": {
+      "componentName": "[A-Z]+",
+      "componentSelectors": {
+        "initial": "^\\.{componentName}(?:-[a-z]+)?$",
+        "combined": "^\\.combined-{componentName}-[a-z]+$"
+      },
+      "utilitySelectors": "^\\.util-[a-z]+$"
+    }
 	}
 }
