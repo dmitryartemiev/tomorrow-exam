@@ -6,7 +6,7 @@
 	@include mobileP {
 		padding: ratioM(1.6) ratioM(2);
 	}
-
+	.header__logo svg,
 	.header__logo img {
 		width: ratio(18);
 

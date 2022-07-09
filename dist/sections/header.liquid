@@ -1,7 +1,11 @@
-<header class="header">
+<header data-on-scroll-animation="true" class="header">
   <div class="header__logo">
     <a href="{{ routes.root_url }}" class="header__link">
-      {%- if section.settings.logo != blank -%}
+      {% if section.settings.use_asset == true %}
+        {% render 'logo' %}
+      {% elsif section.settings.logo_url != blank %}
+        <img src="{{ section.settings.logo_url }}" alt="{{ logo_alt }}">
+      {%- elsif section.settings.logo != blank -%}
         {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
         <img src="{{ section.settings.logo | image_url }}" alt="{{ logo_alt }}">
       {%- else -%}
@@ -74,15 +78,51 @@
   "class": "section-header",
   "settings": [
     {
+      "type": "header",
+      "content": "Logo settings"
+    },
+    {
       "type": "image_picker",
       "id": "logo",
-      "label": "t:sections.header.settings.logo.label"
+      "label": "Logo image",
+      "info": "or"
+    },
+    {
+      "type": "text",
+      "id": "logo_url",
+      "label": "Logo url",
+      "info": "if you need to use svg, or"
+    },
+    {
+      "type": "checkbox",
+      "id": "use_asset",
+      "label": "Use asset logo",
+      "default": false,
+      "info": "use for get svg code of logo and edit it."
+    },
+    {
+      "type": "header",
+      "content": "Menu settings"
     },
     {
       "type": "link_list",
       "id": "menu",
       "default": "main-menu",
       "label": "t:sections.header.settings.menu.label"
+    },
+    {
+      "type": "link_list",
+      "id": "utility",
+      "label": "Utility menu"
+    },
+    {
+      "type": "header",
+      "content": "Content settings"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Header text"
     }
   ]
 }
