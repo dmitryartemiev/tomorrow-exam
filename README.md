@@ -1,4 +1,4 @@
-# Shopify Toolbox
+# Tommorow exam
 
 ## Requirements
 
@@ -7,27 +7,19 @@
 
 ## Usage
 
-1. Firstly, you will need to setup your development themekit environment. Create your `config.yml`
-    from `config.yml.sample` (if you do not have one already):
-
-    ```sh
-    $ cp config.sample.yml config.yml
-    ```
-    and substitute the `<password>`,`<store-name>` and `<theme-id>` inside.
-
-2. Then, install required dependencies:
+1. Install required dependencies:
 
     ```sh
     $ make install
     ```
 
-3. Finally, you can start by running:
+2. Now you can start by running:
 
     ```sh
     $ make watch
     ```
 
-    This will spin up the themekit with development environment and webpack watcher
+    This will spin up the Shopify CLI with development environment and webpack watcher
 
 ## Linting
 
