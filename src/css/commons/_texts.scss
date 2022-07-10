@@ -1,26 +1,50 @@
 /* stylelint-disable selector-class-pattern */
 .h1 {
 	@include h1;
+
+	@include mobileP {
+		@include h1Mobile;
+	}
 }
 
 .h2 {
 	@include h2;
+
+	@include mobileP {
+		@include h2Mobile;
+	}
 }
 
 .h3 {
 	@include h3;
+
+	@include mobileP {
+		@include h3Mobile;
+	}
 }
 
 .h4 {
 	@include h4;
+
+	@include mobileP {
+		@include h4Mobile;
+	}
 }
 
 .body {
 	@include body;
+
+	@include mobileP {
+		@include bodyMobile;
+	}
 }
 
 .bodySmall {
 	@include bodySmall;
+
+	@include mobileP {
+		@include bodySmallMobile;
+	}
 }
 
 .h1Mobile {

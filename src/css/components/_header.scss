@@ -6,6 +6,11 @@
 	@include mobileP {
 		padding: ratioM(1.6) ratioM(2);
 	}
+
+	.header__logo {
+		line-height: 0;
+	}
+
 	.header__logo svg,
 	.header__logo img {
 		width: ratio(18);
@@ -50,6 +55,8 @@
 		display: grid;
 		grid-auto-flow: column;
 		align-items: center;
+		line-height: 0;
+		font-family: $platform;
 
 		li:not(:last-child) {
 			padding-right: ratio(3.5);
@@ -62,6 +69,7 @@
 				text-transform: uppercase;
 				font-weight: 500;
 				line-height: 0;
+				letter-spacing: 0.25em;
 			}
 		}
 	}

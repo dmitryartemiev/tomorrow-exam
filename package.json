@@ -63,6 +63,7 @@
   "dependencies": {
     "gsap": "^3.10.4",
     "lodash-es": "^4.17.21",
-    "normalize-scss": "^7.0.1"
+    "normalize-scss": "^7.0.1",
+    "swiper": "^8.3.0"
   }
 }

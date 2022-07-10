@@ -1,5 +1,65 @@
 {
   "sections": {
+    "16573707266d9e1856": {
+      "type": "content-cards",
+      "blocks": {
+        "6bf07817-20cf-4470-833b-957eda8c55f7": {
+          "type": "image",
+          "settings": {
+            "background": "#00966e",
+            "image": "shopify:\/\/shop_images\/Rectangle299.png",
+            "heading": "Make a scene.",
+            "text": "<p>Everything you need for a great party, from decor to drinks and games.  <\/p>",
+            "link_label": "find your scene",
+            "link_url": "shopify:\/\/collections"
+          }
+        },
+        "f70e5b9f-3bf5-4663-9749-92d4943ffb6a": {
+          "type": "image",
+          "settings": {
+            "background": "#85abbd",
+            "image": "shopify:\/\/shop_images\/Rectangle289.png",
+            "heading": "Make it extra.",
+            "text": "<p>Once you’ve chosen a scene, you can dial it up with fun a la carte add-ons.<\/p>",
+            "link_label": "shop party supplies",
+            "link_url": "shopify:\/\/products\/classic-barware"
+          }
+        },
+        "dcad7694-d4bb-4c30-ac63-861657c60e51": {
+          "type": "image",
+          "settings": {
+            "background": "#e3ff21",
+            "image": "shopify:\/\/shop_images\/Rectangle2891.png",
+            "heading": "Make it joyful.",
+            "text": "<p>Create the arrangement of your dreams with DIY kits from Wild & Flowers.<\/p>",
+            "link_label": "shop florals",
+            "link_url": "shopify:\/\/products\/scenes"
+          }
+        },
+        "b5725c48-bf9d-4c6e-95b5-98f61eff7145": {
+          "type": "image",
+          "settings": {
+            "background": "#bf91c4",
+            "image": "shopify:\/\/shop_images\/Rectangle2892.png",
+            "heading": "Make it happen.",
+            "text": "<p>Need a bartender, caterer, or DJ? Just add  to cart. It’s that easy.<\/p>",
+            "link_label": "browse vendors",
+            "link_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "6bf07817-20cf-4470-833b-957eda8c55f7",
+        "f70e5b9f-3bf5-4663-9749-92d4943ffb6a",
+        "dcad7694-d4bb-4c30-ac63-861657c60e51",
+        "b5725c48-bf9d-4c6e-95b5-98f61eff7145"
+      ],
+      "settings": {
+        "heading": "HAVING FUN 101"
+      }
+    }
   },
-  "order":[]
+  "order": [
+    "16573707266d9e1856"
+  ]
 }

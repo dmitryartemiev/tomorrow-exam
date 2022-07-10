@@ -1,0 +1,139 @@
+.content-cards {
+	text-align: center;
+
+	.content-cards__wrapper {
+		display: flex;
+		justify-content: center;
+		margin-top: ratio(6);
+		grid-gap: ratio();
+		position: relative;
+
+		@include mobileP {
+			margin-top: ratioM(3);
+		}
+
+		&--desktop {
+			@include mobileP {
+				display: none;
+			}
+		}
+
+		&--mobile {
+			display: none;
+
+			@include mobileP {
+				display: flex;
+			}
+
+			&::after {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: ratioM(3);
+				right: 0;
+				top: 0;
+				background: linear-gradient(270deg, #F4EDE5 0%, rgba(244, 237, 229, 0) 100%);
+				z-index: 1;
+			}
+
+			.swiper-button{
+				pointer-events: none;
+				width: ratioM(3);
+				height: ratioM(3);
+				position: absolute;
+				top: 50%;
+				z-index: 2;
+				transform: translateY(-50%);
+				transition: all .5s ease;
+
+				&:not(.swiper-button-disabled) {
+					pointer-events: auto;
+					opacity: 1 !important;
+				}
+			}
+
+			.swiper-button-next{
+				right: ratioM(2);
+			}
+
+			.swiper-button-prev {
+				left: ratioM(2);
+				transform: rotate(180deg) translateY(50%);
+			}
+		}
+	}
+
+	.card__image-wrapper {
+		line-height: 0;
+		max-width: ratio(31.2);
+		margin-bottom: ratio(3);
+
+		@include mobileP {
+			max-width: none;
+			margin-bottom: ratioM(2);
+		}
+
+		img {
+			object-fit: cover;
+		}
+	}
+
+	.card__heading {
+		margin-bottom: ratio();
+
+		@include mobileP{
+			margin-bottom: ratioM(.8);
+		}
+	}
+
+	.card__link {
+		margin-top: ratio(1.6);
+		
+		@include mobileP{
+			margin-top: ratioM(1.3);
+		}
+	}
+
+	.content-cards__card {
+		padding: ratio() ratio() ratio(6.2);
+
+		@include mobileP{
+			padding: ratioM(.8) ratioM(.8) ratioM(6.2);
+			width: ratioM(24.8);
+			height: auto;
+		}
+
+		&:first-child {
+			@include mobileP {
+				margin-left: 10px;
+			}
+		}
+
+		&:last-child {
+			@include mobileP {
+				margin-right: 10px;
+			}
+		}
+	}
+
+	.content-cards__card:not(.swiper-slide){
+		width: auto;
+	}
+
+	.card__link-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	p {
+		max-width: ratio(27.2);
+		margin: 0 auto;
+
+		@include mobileP {
+			font-size: ratioM(1.4);
+			line-height: ratioM(1.8);
+			max-width: none;
+		}
+	}
+}

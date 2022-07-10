@@ -27,6 +27,10 @@ body {
 	}
 }
 
+img{
+	width: 100%;
+}
+
 .visually-hidden{
 	position: absolute !important;
   overflow: hidden;
@@ -37,4 +41,36 @@ body {
   border: 0;
   clip: rect(0 0 0 0);
   word-wrap: normal !important;
+}
+
+.link{
+	font-family: $platform;
+	text-transform: uppercase;
+	font-size: ratio(1.2);
+	line-height: 1;
+	letter-spacing: .25em;
+	font-weight: 500;
+	text-decoration: underline;
+	text-underline-offset: ratio(.4);
+	
+	@include mobileP{
+		font-size: ratioM(1.2);
+		text-underline-offset: ratioM(.4);
+	}
+}
+
+.shopify-section:not(.section-header){
+	margin-top: ratio(8);
+	
+	@include mobileP{
+		margin-top: ratioM(6);
+	}
+}
+
+.swiper-button {
+	opacity: 0;
+}
+
+.swiper{
+	opacity: 0;
 }

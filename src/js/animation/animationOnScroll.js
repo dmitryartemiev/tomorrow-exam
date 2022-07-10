@@ -1,7 +1,7 @@
 import gsap from "gsap";
 
 const animationOnScroll = () => {
-	const elements = gsap.utils.toArray('[data-on-scroll-animation="true"]')
+	const elements = gsap.utils.toArray('.shopify-section')
 	
 	elements.forEach(element => {
 		const anim = gsap.fromTo(
