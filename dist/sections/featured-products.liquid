@@ -1,0 +1,94 @@
+{% if section.settings.heading != blank %}
+	<h1 class="h1">{{ section.settings.heading }}</h1>
+{% endif %}
+
+{% if section.blocks.size > 0 %}
+	<div class="featured-product__wrapper{% if section.blocks.size > 1 %} swiper{% endif %}">
+		{% if section.blocks.size > 1 %}<div class="swiper-wrapper">{% endif %}
+			{% for block in section.blocks %}
+				<div class="featured-product__card{% if section.blocks.size > 1 %} swiper-slide{% endif %}" data-id="{{ block.settings.product.selected_or_first_available_variant.id }}">
+					<div class="featured-product__image-wrapper">
+						{% if block.settings.product.featured_image != blank %}
+							{{ block.settings.product.featured_image | image_url: width: 1500 | image_tag:
+								loading: 'lazy',
+								width: block.settings.product.featured_image.width,
+								height: block.settings.product.featured_image.height,
+								class: 'featured-product__image',
+								sizes: '50vw',
+								widths: '375, 550, 750, 1100, 1500, 1780, 2000, 3000, 3840',
+								alt: image.alt | escape
+							}}
+						{% else %}
+							{{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+						{% endif %}
+					</div>
+					<div class="featured-product__info">
+						<div class="featured-product__title">
+							<h4 class="h4">{{ block.settings.product.title }}</h4>
+						</div>
+						<div class="featured-product__price">
+							<div class="price">
+								<ins>{{ block.settings.product.price | money_without_trailing_zeros }}</ins>
+								{% if block.settings.product.compare_at_price != blank %}
+									<del>{{ block.settings.product.compare_at_price | money_without_trailing_zeros }}</del>
+								{% endif %}
+							</div>
+						</div>
+					</div>
+				</div>
+			{% endfor %}
+		{% if section.blocks.size > 1 %}</div>{% endif %}
+	</div>
+	<div class="swiper-button swiper-button-prev"><img src="{{ 'arrow-right.svg' | asset_url }}"></div>
+	<div class="swiper-button swiper-button-next"><img src="{{ 'arrow-right.svg' | asset_url }}"></div>
+{% endif %}
+
+{% if section.settings.link_label != blank and section.settings.link_url != blank %}
+	<div class="featured-product__link-wrapper">
+		<a class="featured-product__link link" href="{{ section.settings.link_url }}">{{ section.settings.link_label }}</a>
+	</div>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Featured products",
+	"tag": "section",
+	"class": "featured-products",
+	"settings": [{
+			"type": "html",
+			"id": "heading",
+			"label": "Section Heading"
+		},
+		{
+			"type": "header",
+			"content": "Link settings"
+		},
+		{
+			"type": "text",
+			"id": "link_label",
+			"label": "Link label",
+			"default": "shop all"
+		},
+		{
+			"type": "url",
+			"id": "link_url",
+			"label": "Link url"
+		}
+	],
+	"blocks": [{
+		"type": "product",
+		"name": "Product",
+		"settings": [{
+			"type": "product",
+			"id": "product",
+			"label": "Product"
+		}]
+	}],
+	"presets": [{
+		"name": "Featured products",
+		"settings": {
+			"heading": "PARTY A LA CARTE"
+		}
+	}]
+}
+{% endschema %}

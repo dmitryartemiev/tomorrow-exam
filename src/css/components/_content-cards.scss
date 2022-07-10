@@ -36,7 +36,7 @@
 				z-index: 1;
 			}
 
-			.swiper-button{
+			.swiper-button {
 				pointer-events: none;
 				width: ratioM(3);
 				height: ratioM(3);
@@ -44,7 +44,7 @@
 				top: 50%;
 				z-index: 2;
 				transform: translateY(-50%);
-				transition: all .5s ease;
+				transition: opacity 0.5s ease;
 
 				&:not(.swiper-button-disabled) {
 					pointer-events: auto;
@@ -52,7 +52,7 @@
 				}
 			}
 
-			.swiper-button-next{
+			.swiper-button-next {
 				right: ratioM(2);
 			}
 

@@ -51,9 +51,10 @@
 @mixin h4 {
 	@include baseText;
 
-	font-size: ratio(1.2);
-	line-height: ratio(2.2);
-	text-transform: uppercase;
+	font-weight: 300;
+	font-style: italic;
+	font-size: ratio(2.4);
+	line-height: ratio(3.2);
 	letter-spacing: 0.05em;
 }
 
@@ -102,13 +103,9 @@
 }
 
 @mixin h4Mobile {
-	@include baseText;
-
-	font-size: ratioM(1.2);
-	font-weight: 500;
-	line-height: ratioM(2.2);
-	text-transform: uppercase;
-	letter-spacing: 0.02em;
+	
+	font-size: ratioM(2);
+	line-height: ratioM(2.4);
 }
 
 @mixin bodyMobile {

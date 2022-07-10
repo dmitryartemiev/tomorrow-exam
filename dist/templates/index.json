@@ -57,9 +57,50 @@
       "settings": {
         "heading": "HAVING FUN 101"
       }
+    },
+    "165748350498fe8f8f": {
+      "type": "featured-products",
+      "blocks": {
+        "2294133a-df88-46c8-bd41-6854239e1361": {
+          "type": "product",
+          "settings": {
+            "product": "classic-barware"
+          }
+        },
+        "1c0e8e27-7f74-43d7-816e-f33e5252ca91": {
+          "type": "product",
+          "settings": {
+            "product": "colored-wine-glasses"
+          }
+        },
+        "1deefc27-714b-4848-ad31-6d3135c4cabc": {
+          "type": "product",
+          "settings": {
+            "product": "figlia-aperitivo"
+          }
+        },
+        "5fb07d12-8483-4c3f-8222-8950bcf60b46": {
+          "type": "product",
+          "settings": {
+            "product": "scenes"
+          }
+        }
+      },
+      "block_order": [
+        "2294133a-df88-46c8-bd41-6854239e1361",
+        "1c0e8e27-7f74-43d7-816e-f33e5252ca91",
+        "1deefc27-714b-4848-ad31-6d3135c4cabc",
+        "5fb07d12-8483-4c3f-8222-8950bcf60b46"
+      ],
+      "settings": {
+        "heading": "PARTY A LA CARTE",
+        "link_label": "shop all",
+        "link_url": "shopify:\/\/collections\/all"
+      }
     }
   },
   "order": [
-    "16573707266d9e1856"
+    "16573707266d9e1856",
+    "165748350498fe8f8f"
   ]
 }

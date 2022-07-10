@@ -1,0 +1,138 @@
+.featured-products {
+	padding-bottom: ratio(8);
+	position: relative;
+
+	@include mobileP {
+		padding-bottom: ratioM(6.6);
+	}
+
+	.h1 {
+		text-align: center;
+		padding: 0 ratio(2);
+		
+		@include mobileP {
+			padding: 0 ratioM(2);
+		}
+	}
+
+	.featured-product__wrapper {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		margin-top: ratio(6);
+		grid-gap: ratio(0.2);
+		max-width: ratio(125.8);
+
+		@include mobileP {
+			max-width: none;
+			margin-top: ratioM(3);
+
+			&::after,
+			&::before {
+				content: '';
+				position: absolute;
+				height: 100%;
+				width: ratioM(3);
+				top: 0;
+				z-index: 2;
+			}
+
+			&::after {
+				right: 0;
+				background: linear-gradient(270deg, #F4EDE5 0%, rgba(244, 237, 229, 0) 100%);
+			}
+
+			&::before {
+				left: 0;
+				background: linear-gradient(-270deg, #F4EDE5 0%, rgba(244, 237, 229, 0) 100%);
+			}
+		}
+
+		.featured-product__image-wrapper {
+			img {
+				object-fit: cover;
+				max-height: ratio(31.3);
+
+				@include mobileP {
+					max-height: ratioM(20.8);
+				}
+			}
+		}
+	}
+
+	.featured-product__card {
+		max-width: ratio(41.8);
+		background: $white;
+		cursor: pointer;
+
+		@include mobileP {
+			max-width: ratioM(27.8);
+		}
+	}
+
+	.featured-product__info {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: ratio(2);
+
+		@include mobileP {
+			padding: ratioM(1.2);
+			flex-flow: column;
+			align-items: flex-start;
+		}
+
+		.featured-product__price {
+			@include mobileP {
+				margin-top: ratioM();
+			}
+		}
+	}
+
+	.featured-product__link-wrapper {
+		margin-top: ratio(4.8);
+		display: flex;
+		justify-content: center;
+
+		@include mobileP {
+			margin-top: ratioM(4.1);
+		}
+
+		a {
+			font-size: ratio(1.6);
+
+			@include mobileP {
+				font-size: ratioM(1.2);
+			}
+		}
+	}
+
+	.swiper-button {
+		pointer-events: none;
+		width: ratio(3.1);
+		height: ratio(1.6);
+		position: absolute;
+		top: 50%;
+		z-index: 2;
+		transform: translateY(-50%);
+		transition: opacity 0.5s ease;
+
+		&:not(.swiper-button-disabled) {
+			pointer-events: auto;
+			opacity: 1 !important;
+		}
+
+		@include mobileP {
+			display: none;
+		}
+	}
+
+	.swiper-button-next {
+		right: ratio(4);
+		transform: rotate(180deg) translateY(50%);
+	}
+
+	.swiper-button-prev {
+		left: ratio(4);
+	}
+}

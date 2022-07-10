@@ -1,6 +1,4 @@
 import Swiper, {FreeMode, Navigation} from "swiper";
-import 'swiper/css';
-
 
 let containers = document.querySelectorAll('.swiper.content-cards__wrapper')
 containers.forEach((container, index) => {
